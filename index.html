@@ -1280,12 +1280,18 @@
       // Smooth Scrolling for all links
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-          document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-          });
-          if (window.innerWidth <= 768) {
-            navLinks.style.display = 'none';
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') return; // Don't do anything for plain '#' links
+          
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            e.preventDefault();
+            targetElement.scrollIntoView({
+              behavior: 'smooth'
+            });
+            if (window.innerWidth <= 768) {
+              navLinks.style.display = 'none';
+            }
           }
         });
       });
