@@ -38,7 +38,7 @@ const Navbar = () => {
                         <img src="/image.JPG" alt="Logo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                     </div>
                     <span className="mobile-hidden">PAVAN M M</span>
-                    <span className="md-hidden">P M M</span>
+                    <span className="md-hidden">Pavan M M</span>
                 </a>
 
                 {/* Desktop Menu */}

@@ -308,11 +308,11 @@ ul {
 .btn-resume {
     background: rgba(255, 255, 255, 0.05);
     color: white !important;
-    padding: 0.6rem 1.5rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 50px;
+    padding: 1rem 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
     font-weight: 700;
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     transition: var(--transition);
     display: inline-flex;
     align-items: center;
@@ -487,7 +487,8 @@ ul {
     }
 
     .btn-primary,
-    .btn-outline {
+    .btn-outline,
+    .btn-resume {
         width: 100%;
         justify-content: center;
     }
@@ -558,6 +559,16 @@ ul {
 
     .section-padding {
         padding: 4rem 1rem;
+    }
+
+    .about-text-content {
+        text-align: center;
+    }
+
+    .hero-btns {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
     }
 }
 

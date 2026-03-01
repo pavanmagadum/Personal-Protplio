@@ -27,7 +27,7 @@ const Hero = () => {
                         Hey, I'm <span className="text-white">PAVAN M M</span>. Currently pursuing MCA and specializing in building
                         scalable, AI-powered applications with real-world impact. Passionate about Python, Java, and Machine Learning.
                     </p>
-                    <div style={{
+                    <div className="hero-btns" style={{
                         display: 'flex',
                         flexWrap: 'wrap',
                         gap: '1.25rem',
@@ -38,7 +38,6 @@ const Hero = () => {
                         <a
                             href="#projects"
                             className="btn-primary"
-                            style={{ padding: '0.9rem 2rem' }}
                         >
                             Recent Projects
                         </a>
@@ -47,7 +46,6 @@ const Hero = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             className="btn-resume"
-                            style={{ padding: '0.9rem 2rem' }}
                         >
                             <i className="fas fa-download"></i>
                             Download CV
@@ -55,7 +53,6 @@ const Hero = () => {
                         <a
                             href="#contact"
                             className="btn-outline"
-                            style={{ padding: '0.9rem 2.25rem' }}
                         >
                             Get In Touch
                         </a>
