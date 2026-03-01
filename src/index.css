@@ -474,6 +474,9 @@ ul {
     border-radius: 1rem;
     font-weight: 700;
     transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .btn-outline:hover {
