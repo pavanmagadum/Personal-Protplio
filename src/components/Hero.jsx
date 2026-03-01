@@ -38,10 +38,19 @@ const Hero = () => {
                         <a
                             href="#projects"
                             className="btn-primary"
-                            style={{ padding: '0.9rem 2.25rem' }}
+                            style={{ padding: '0.9rem 2rem' }}
                         >
                             Recent Projects
-                            <i className="fas fa-arrow-right" style={{ marginLeft: '10px' }}></i>
+                        </a>
+                        <a
+                            href="/Pavan resume.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="btn-resume"
+                            style={{ padding: '0.9rem 2rem' }}
+                        >
+                            <i className="fas fa-download"></i>
+                            Download CV
                         </a>
                         <a
                             href="#contact"

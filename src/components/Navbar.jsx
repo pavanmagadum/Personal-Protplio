@@ -42,12 +42,17 @@ const Navbar = () => {
                 </a>
 
                 {/* Desktop Menu */}
-                <ul className="hidden md-flex items-center" style={{ gap: '1.5rem', alignItems: 'center' }}>
+                <ul className="hidden md-flex items-center" style={{ gap: '1rem', alignItems: 'center' }}>
                     {navLinks.map((link) => (
                         <li key={link.name}>
-                            <a href={link.href} className="nav-link">{link.name}</a>
+                            <a href={link.href} className="nav-link" style={{ fontSize: '0.8rem' }}>{link.name}</a>
                         </li>
                     ))}
+                    <li>
+                        <a href="/Pavan resume.pdf" target="_blank" rel="noopener noreferrer" className="btn-resume">
+                            RESUME
+                        </a>
+                    </li>
                     <li><a href="#contact" className="btn-hire">HIRE ME</a></li>
                 </ul>
 
@@ -73,13 +78,25 @@ const Navbar = () => {
                         {link.name}
                     </a>
                 ))}
-                <a
-                    href="#contact"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="btn-hire-mobile"
-                >
-                    HIRE ME
-                </a>
+                <div className="flex flex-col gap-4 mt-6 w-full px-6">
+                    <a
+                        href="/Pavan resume.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn-resume"
+                        style={{ width: '100%', justifyContent: 'center', padding: '1rem' }}
+                    >
+                        DOWNLOAD RESUME
+                    </a>
+                    <a
+                        href="#contact"
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="btn-hire"
+                        style={{ width: '100%', justifyContent: 'center', padding: '1rem' }}
+                    >
+                        HIRE ME
+                    </a>
+                </div>
             </div>
         </nav>
     );

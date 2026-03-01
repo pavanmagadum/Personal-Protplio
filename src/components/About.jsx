@@ -55,6 +55,9 @@ const About = () => {
                         </div>
                         <div className="flex flex-wrap gap-4 pt-2">
                             <a href="#projects" className="btn-primary" style={{ padding: '0.8rem 2rem' }}>Recent Projects</a>
+                            <a href="/Pavan resume.pdf" target="_blank" rel="noopener noreferrer" className="btn-resume" style={{ padding: '0.8rem 2rem' }}>
+                                <i className="fas fa-file-pdf"></i> View Resume
+                            </a>
                             <a href="#contact" className="btn-outline" style={{ padding: '0.8rem 2rem' }}>Hire Me</a>
                         </div>
                     </motion.div>
