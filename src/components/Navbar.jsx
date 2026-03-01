@@ -25,45 +25,36 @@ const Navbar = () => {
     return (
         <nav className={`fixed w-full z-1000 transition-all duration-300 ${scrolled ? 'nav-scrolled shadow-lg' : 'bg-transparent py-5'}`}>
             <div className="container flex justify-between items-center" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <a href="#home" className="flex items-center gap-3 gradient-text transform hover:scale-105 transition-transform" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', fontSize: '1.5rem', fontWeight: 900 }}>
+                <a href="#home" className="flex items-center gap-3 gradient-text transform hover:scale-105 transition-transform" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', fontSize: '1.25rem', fontWeight: 900 }}>
                     <div style={{
-                        width: '35px',
-                        height: '35px',
+                        width: '32px',
+                        height: '32px',
                         borderRadius: '50%',
                         overflow: 'hidden',
                         border: '2px solid var(--primary-light)',
-                        boxShadow: '0 0 10px rgba(99, 102, 241, 0.4)'
+                        boxShadow: '0 0 10px rgba(99, 102, 241, 0.4)',
+                        flexShrink: 0
                     }}>
                         <img src="/image.JPG" alt="Logo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                     </div>
-                    PAVAN M M
+                    <span className="mobile-hidden">PAVAN M M</span>
+                    <span className="md-hidden">P M M</span>
                 </a>
 
                 {/* Desktop Menu */}
-                <ul className="hidden md-flex items-center" style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
+                <ul className="hidden md-flex items-center" style={{ gap: '1.5rem', alignItems: 'center' }}>
                     {navLinks.map((link) => (
-                        <li key={link.name} className="desktop-nav-item">
-                            <a
-                                href={link.href}
-                                className="nav-link"
-                            >
-                                {link.name}
-                            </a>
+                        <li key={link.name}>
+                            <a href={link.href} className="nav-link">{link.name}</a>
                         </li>
                     ))}
-                    <li>
-                        <a
-                            href="#contact"
-                            className="btn-hire"
-                        >
-                            HIRE ME
-                        </a>
-                    </li>
+                    <li><a href="#contact" className="btn-hire">HIRE ME</a></li>
                 </ul>
 
                 {/* Mobile Toggle */}
                 <button
                     className="mobile-toggle"
+                    style={{ display: 'block' }}
                     onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 >
                     <i className={`fas ${mobileMenuOpen ? 'fa-times' : 'fa-bars'}`}></i>

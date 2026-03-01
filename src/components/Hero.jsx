@@ -27,17 +27,26 @@ const Hero = () => {
                         Hey, I'm <span className="text-white">PAVAN M M</span>. Currently pursuing MCA and specializing in building
                         scalable, AI-powered applications with real-world impact. Passionate about Python, Java, and Machine Learning.
                     </p>
-                    <div className="flex flex-col md-flex-row items-center justify-center gap-4 py-4" style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center' }}>
+                    <div style={{
+                        display: 'flex',
+                        flexWrap: 'wrap',
+                        gap: '1.25rem',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        marginTop: '2rem'
+                    }}>
                         <a
                             href="#projects"
                             className="btn-primary"
+                            style={{ padding: '0.9rem 2.25rem' }}
                         >
                             Recent Projects
-                            <i className="fas fa-arrow-right"></i>
+                            <i className="fas fa-arrow-right" style={{ marginLeft: '10px' }}></i>
                         </a>
                         <a
                             href="#contact"
                             className="btn-outline"
+                            style={{ padding: '0.9rem 2.25rem' }}
                         >
                             Get In Touch
                         </a>

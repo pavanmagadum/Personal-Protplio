@@ -35,30 +35,24 @@ const Skills = () => {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-indigo-500/5 rounded-full blur-[120px] pointer-events-none"></div>
 
             <div className="container relative z-10">
-                <div className="text-center mb-16 px-6 relative">
+                <header className="section-header">
                     <motion.div
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 0.05 }}
-                        className="absolute -top-10 left-1/2 -translate-x-1/2 text-9xl font-black select-none pointer-events-none"
-                        style={{ color: 'white', letterSpacing: '20px' }}
+                        className="absolute -top-10 left-1/2 -translate-x-1/2 text-[clamp(4rem,15vw,9rem)] font-black select-none pointer-events-none tracking-widest"
+                        style={{ color: 'white' }}
                     >
                         EXPERTISE
                     </motion.div>
-                    <h2 className="text-4xl font-extrabold" style={{ fontSize: '3.5rem', marginBottom: '1rem', position: 'relative' }}>
+                    <h2 className="section-title">
                         Technical <span className="gradient-text">Mastery</span>
                     </h2>
-                    <p className="text-gray-400 max-w-2xl mx-auto" style={{ fontSize: '1.2rem', margin: '0 auto', lineHeight: 1.8 }}>
+                    <p className="section-desc">
                         Specializing in AI-powered systems and scalable backend architectures.
                     </p>
-                </div>
+                </header>
 
-                <div style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-                    gap: '2rem',
-                    maxWidth: '1200px',
-                    margin: '0 auto'
-                }}>
+                <div className="responsive-grid grid-tight">
                     {skillCategories.map((category, index) => (
                         <motion.div
                             key={category.title}
@@ -68,7 +62,7 @@ const Skills = () => {
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             className="glass-card"
                             style={{
-                                padding: '2rem',
+                                padding: 'clamp(1.25rem, 5vw, 2rem)',
                                 border: '1px solid rgba(255,255,255,0.05)',
                                 background: 'rgba(17, 24, 39, 0.4)',
                                 backdropFilter: 'blur(10px)',
@@ -81,8 +75,8 @@ const Skills = () => {
                         >
                             <div style={{
                                 position: 'relative',
-                                width: '60px',
-                                height: '60px',
+                                width: '50px',
+                                height: '50px',
                                 marginBottom: '1.5rem',
                                 display: 'flex',
                                 alignItems: 'center',
@@ -96,20 +90,20 @@ const Skills = () => {
                                     borderRadius: '12px',
                                     transform: 'rotate(45deg)'
                                 }}></div>
-                                <i className={`fas ${category.icon}`} style={{ fontSize: '1.8rem', color: 'var(--primary-light)' }}></i>
+                                <i className={`fas ${category.icon}`} style={{ fontSize: '1.5rem', color: 'var(--primary-light)' }}></i>
                             </div>
 
-                            <h3 className="text-2xl font-bold" style={{ fontSize: '1.5rem', marginBottom: '1.2rem', color: 'white' }}>{category.title}</h3>
+                            <h3 style={{ fontSize: 'clamp(1.1rem, 4vw, 1.4rem)', fontWeight: 800, marginBottom: '1rem', color: 'white' }}>{category.title}</h3>
 
-                            <div className="flex flex-wrap gap-3" style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem' }}>
+                            <div className="flex flex-wrap gap-2" style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
                                 {category.skills.map((skill) => (
                                     <span
                                         key={skill}
                                         style={{
                                             background: 'rgba(255,255,255,0.03)',
-                                            padding: '0.35rem 0.8rem',
+                                            padding: '0.3rem 0.7rem',
                                             borderRadius: '8px',
-                                            fontSize: '0.85rem',
+                                            fontSize: '0.75rem',
                                             fontWeight: 600,
                                             border: '1px solid rgba(255,255,255,0.08)',
                                             color: 'var(--text-muted)',

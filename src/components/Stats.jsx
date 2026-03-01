@@ -12,7 +12,11 @@ const Stats = () => {
     return (
         <section className="stats-section">
             <div className="container">
-                <div className="grid grid-cols-2 lg-flex justify-between items-center text-center py-6 gap-8" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '2rem' }}>
+                <div className="responsive-grid" style={{
+                    '--grid-min': '150px',
+                    gap: '2rem',
+                    padding: '2rem 0'
+                }}>
                     {stats.map((stat, index) => (
                         <motion.div
                             key={stat.label}
@@ -20,10 +24,10 @@ const Stats = () => {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="stat-item"
+                            className="stat-item text-center"
                         >
-                            <h3 className="stat-title">{stat.value}</h3>
-                            <p style={{ color: 'var(--text-muted)', fontWeight: 600, fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '1px' }}>{stat.label}</p>
+                            <h3 className="stat-title" style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)' }}>{stat.value}</h3>
+                            <p style={{ color: 'var(--text-muted)', fontWeight: 700, fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '1.5px' }}>{stat.label}</p>
                         </motion.div>
                     ))}
                 </div>
