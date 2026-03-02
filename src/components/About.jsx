@@ -55,11 +55,10 @@ const About = () => {
                             <h2 style={{ fontSize: 'clamp(1.75rem, 5vw, 2.5rem)', fontWeight: 800, marginBottom: '0.75rem' }}>Driven by <span className="gradient-text">Technical Excellence</span></h2>
                             <div className="flex flex-col gap-4">
                                 <p className="text-gray-400" style={{ fontSize: 'clamp(0.95rem, 2.5vw, 1.1rem)', lineHeight: 1.8 }}>
-                                    I am a motivated **MCA student** with a strong foundation in **Python, Java, Data Structures, and Software Development**.
-                                    My expertise spans Machine Learning, OCR systems, and backend API development through hands-on industry internships.
+                                    I am a motivated MCA student with a strong foundation in Python, Java, data structures, and software development. Through hands-on industry internships, I have gained practical experience in machine learning, OCR systems, and backend API development.
                                 </p>
                                 <p className="text-gray-400" style={{ fontSize: 'clamp(0.95rem, 2.5vw, 1.1rem)', lineHeight: 1.8 }}>
-                                   Passionate about building data-driven and AI-powered scalable systems that create real-world impact. Currently exploring modern technologies to solve complex problems and develop meaningful digital experiences.
+                                    Passionate about building data-driven and AI-powered scalable systems that create real-world impact. Currently exploring modern technologies to solve complex problems and develop meaningful digital experiences.
                                 </p>
                             </div>
                         </div>
