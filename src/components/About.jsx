@@ -59,8 +59,7 @@ const About = () => {
                                     My expertise spans Machine Learning, OCR systems, and backend API development through hands-on industry internships.
                                 </p>
                                 <p className="text-gray-400" style={{ fontSize: 'clamp(0.95rem, 2.5vw, 1.1rem)', lineHeight: 1.8 }}>
-                                    Passionate about building **data-driven and AI-powered scalable systems** with real-world impact. Currently exploring
-                                    cutting-edge technologies to solve complex problems and create meaningful digital experiences.
+                                   Passionate about building data-driven and AI-powered scalable systems that create real-world impact. Currently exploring modern technologies to solve complex problems and develop meaningful digital experiences.
                                 </p>
                             </div>
                         </div>
