@@ -4,6 +4,20 @@ import { motion } from 'framer-motion';
 const Projects = () => {
     const projects = [
         {
+            title: 'Vision Guard – AI-Powered Security Analytics',
+            description: 'Developed an intelligent surveillance system featuring real-time person tracking, face detection, and automated security alerts.',
+            duration: 'Feb 2025 – Present',
+            image: '/vision-guard.png',
+            tags: ['Python', 'OpenCV', 'YOLOv8', 'Firebase', 'React', 'Telegram API'],
+            bullets: [
+                'Implemented high-precision entry/exit counting using state machine logic and buffer zones.',
+                'Integrated real-time face detection with confidence filtering for accurate threat assessment.',
+                'Developed automated alert system with live snapshots sent to Telegram when thresholds exceeded.',
+                'Built a real-time monitoring dashboard using React and Firebase for data visualization.'
+            ],
+            link: 'https://person-count-dashboard.vercel.app/',
+        },
+        {
             title: 'Climate-Aware Crop & Organic Fertilizer Recommender',
             description: 'Developed an AI-based system to recommend suitable crops and eco-friendly fertilizers using soil and climate data.',
             duration: 'Sep 2024 – Dec 2024',
