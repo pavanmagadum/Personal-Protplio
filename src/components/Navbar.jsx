@@ -55,44 +55,62 @@ const Navbar = () => {
                     </li>
                     <li><a href="#contact" className="btn-hire">HIRE ME</a></li>
                 </ul>
-
-                {/* Mobile Toggle */}
-                <button
-                    className="mobile-toggle"
-                    style={{ display: 'block' }}
-                    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                >
-                    <i className={`fas ${mobileMenuOpen ? 'fa-times' : 'fa-bars'}`}></i>
-                </button>
             </div>
 
-            {/* Mobile Menu */}
+            {/* Mobile Toggle Button - Outside container for better positioning */}
+            <button
+                className={`mobile-toggle ${mobileMenuOpen ? 'active' : ''}`}
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                aria-label="Toggle Menu"
+                style={{ 
+                    display: 'flex',
+                    position: 'fixed',
+                    right: 'max(1.25rem, 5vw)',
+                    top: scrolled ? '15px' : '25px',
+                    backgroundColor: mobileMenuOpen ? 'transparent' : 'rgba(255,255,255,0.05)',
+                    borderRadius: '50%',
+                    backdropFilter: 'blur(5px)'
+                }}
+            >
+                <i className={`fas ${mobileMenuOpen ? 'fa-times' : 'fa-bars'}`}></i>
+            </button>
+
+            {/* Mobile Overlay Backdrop */}
+            <div 
+                className={`mobile-overlay ${mobileMenuOpen ? 'open' : ''}`} 
+                onClick={() => setMobileMenuOpen(false)}
+            ></div>
+
+            {/* Mobile Menu (Side Drawer) */}
             <div className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}>
-                {navLinks.map((link) => (
-                    <a
-                        key={link.name}
-                        href={link.href}
-                        onClick={() => setMobileMenuOpen(false)}
-                        className="mobile-nav-link"
-                    >
-                        {link.name}
-                    </a>
-                ))}
-                <div className="flex flex-col gap-4 mt-6 w-full px-6">
+                <div className="flex flex-col w-full gap-2">
+                    {navLinks.map((link) => (
+                        <a
+                            key={link.name}
+                            href={link.href}
+                            onClick={() => setMobileMenuOpen(false)}
+                            className="mobile-nav-link"
+                        >
+                            {link.name}
+                        </a>
+                    ))}
+                </div>
+                
+                <div className="flex flex-col gap-4 mt-8 w-full">
                     <a
                         href="/Pavan resume.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="btn-resume"
-                        style={{ width: '100%', justifyContent: 'center', padding: '1rem' }}
+                        style={{ width: '100%', justifyContent: 'center', padding: '0.8rem' }}
                     >
-                        DOWNLOAD RESUME
+                        RESUME
                     </a>
                     <a
                         href="#contact"
                         onClick={() => setMobileMenuOpen(false)}
                         className="btn-hire"
-                        style={{ width: '100%', justifyContent: 'center', padding: '1rem' }}
+                        style={{ width: '100%', justifyContent: 'center', padding: '0.8rem' }}
                     >
                         HIRE ME
                     </a>

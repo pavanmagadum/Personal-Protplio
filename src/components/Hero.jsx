@@ -65,7 +65,7 @@ const Hero = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1, duration: 1 }}
-                className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 mobile-hidden"
+                className="absolute bottom-5 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 mobile-hidden"
                 style={{ left: '50%', transform: 'translateX(-50%)' }}
             >
                 <span style={{ fontSize: '10px', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '2px' }}>Explore More</span>
