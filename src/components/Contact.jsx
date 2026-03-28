@@ -9,27 +9,28 @@ const Contact = () => {
         e.preventDefault();
         setStatus('sending');
         
-        const formData = new FormData(e.target);
+        const form = e.target;
+        const formData = new FormData(form);
         
-        // Add the access key for Web3Forms
-        // The user should replace YOUR_ACCESS_KEY_HERE with their actual key from web3forms.com
-        formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
-
         try {
-            const response = await fetch("https://api.web3forms.com/submit", {
+            // Replace YOUR_FORMSPREE_ID with the ID provided by Formspree (e.g., https://formspree.io/f/mxwvlkjp)
+            // Or use your email directly for the first time setup: https://formspree.io/f/pavanmagadum8@gmail.com
+            const response = await fetch("https://formspree.io/f/pavanmagadum8@gmail.com", {
                 method: "POST",
-                body: formData
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
             });
 
-            const data = await response.json();
-
-            if (data.success) {
+            if (response.ok) {
                 setStatus('success');
-                e.target.reset();
+                form.reset();
                 setTimeout(() => setStatus(''), 5000);
             } else {
+                const data = await response.json();
                 setStatus('error');
-                setErrorMessage(data.message || "Something went wrong. Please try again.");
+                setErrorMessage(data.errors ? data.errors.map(error => error.message).join(", ") : "Something went wrong.");
             }
         } catch (error) {
             setStatus('error');
