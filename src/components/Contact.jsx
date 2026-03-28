@@ -13,9 +13,8 @@ const Contact = () => {
         const formData = new FormData(form);
         
         try {
-            // Replace YOUR_FORMSPREE_ID with the ID provided by Formspree (e.g., https://formspree.io/f/mxwvlkjp)
-            // Or use your email directly for the first time setup: https://formspree.io/f/pavanmagadum8@gmail.com
-            const response = await fetch("https://formspree.io/f/pavanmagadum8@gmail.com", {
+            // Using the Formspree ID: xpqoqvwd
+            const response = await fetch("https://formspree.io/f/xpqoqvwd", {
                 method: "POST",
                 body: formData,
                 headers: {
