@@ -63,13 +63,6 @@ const About = () => {
                             </div>
                         </div>
 
-                        <div className="flex flex-wrap gap-4 pt-4 hero-btns">
-                            <a href="#projects" className="btn-primary">Recent Projects</a>
-                            <a href="/Pavan resume.pdf" target="_blank" rel="noopener noreferrer" className="btn-resume">
-                                <i className="fas fa-file-pdf"></i> View Resume
-                            </a>
-                            <a href="#contact" className="btn-outline">Hire Me</a>
-                        </div>
                     </motion.div>
                 </div>
             </div>
