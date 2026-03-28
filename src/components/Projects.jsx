@@ -72,7 +72,16 @@ const Projects = () => {
                         >
                             <div style={{ height: 'clamp(180px, 30vw, 240px)', background: 'rgba(99,102,241,0.05)', position: 'relative', overflow: 'hidden' }}>
                                 {project.image ? (
-                                    <img src={project.image} alt={project.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                    <img 
+                                        src={project.image} 
+                                        alt={project.title} 
+                                        style={{ 
+                                            width: '100%', 
+                                            height: '100%', 
+                                            objectFit: 'cover',
+                                            borderRadius: '24px 24px 0 0'
+                                        }} 
+                                    />
                                 ) : (
                                     <div className="flex items-center justify-center w-full h-full text-4xl text-indigo-500 opacity-20">
                                         <i className="fas fa-microchip"></i>

@@ -33,7 +33,8 @@ const About = () => {
                                 height: '100%',
                                 objectFit: 'cover',
                                 filter: 'brightness(0.9) contrast(1.1)',
-                                transition: 'transform 0.5s ease'
+                                transition: 'transform 0.5s ease',
+                                borderRadius: '24px'
                             }}
                             onMouseOver={(e) => { e.currentTarget.style.transform = 'scale(1.05)'; }}
                             onMouseOut={(e) => { e.currentTarget.style.transform = 'scale(1)'; }}
