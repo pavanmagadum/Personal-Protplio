@@ -6,8 +6,9 @@ const Experience = () => {
         {
             role: 'AI & ML Intern',
             company: 'Spherenex',
-            duration: 'Feb 2026 – Present',
+            duration: 'Feb 2026 – May 2026',
             icon: 'fa-brain',
+            certificate: '/internship.png',
             description: 'Developing end-to-end AI workflows for vehicle detection and license plate recognition.',
             bullets: [
                 'Trained and fine-tuned YOLOv8 object detection model for real-time license plate detection.',
@@ -61,11 +62,9 @@ const Experience = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: index * 0.1 }}
-                            className="glass-card h-full"
+                            className="glass-card h-full flex flex-col"
                             style={{
                                 padding: 'clamp(1.5rem, 5vw, 2.5rem)',
-                                display: 'flex',
-                                flexDirection: 'column',
                                 gap: '1.5rem',
                                 position: 'relative',
                                 background: 'rgba(17, 24, 39, 0.4)',
@@ -77,8 +76,8 @@ const Experience = () => {
                             {/* Decorative element */}
                             <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-indigo-500/10 to-transparent rounded-tr-[24px] rounded-bl-full pointer-events-none"></div>
 
-                            <div className="flex flex-col sm:flex-row justify-between items-start gap-4" style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                                <div className="flex items-center gap-4" style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                            <div className="flex flex-col sm:flex-row justify-between items-start gap-4">
+                                <div className="flex items-center gap-4">
                                     <div style={{
                                         width: '45px',
                                         height: '45px',
@@ -126,30 +125,70 @@ const Experience = () => {
                                 ))}
                             </ul>
 
-                            <div className="flex flex-wrap gap-2 pt-4" style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginTop: 'auto' }}>
-                                {exp.tags.map(tag => (
-                                    <span key={tag} style={{
-                                        fontSize: '0.65rem',
-                                        padding: '0.25rem 0.6rem',
-                                        background: 'rgba(255,255,255,0.03)',
-                                        border: '1px solid rgba(255,255,255,0.08)',
-                                        borderRadius: '6px',
-                                        color: 'var(--text-muted)',
-                                        fontWeight: 600,
-                                        transition: 'all 0.3s ease'
-                                    }}
+                            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mt-auto pt-4">
+                                <div className="flex flex-wrap gap-2">
+                                    {exp.tags.map(tag => (
+                                        <span key={tag} style={{
+                                            fontSize: '0.65rem',
+                                            padding: '0.25rem 0.6rem',
+                                            background: 'rgba(255,255,255,0.03)',
+                                            border: '1px solid rgba(255,255,255,0.08)',
+                                            borderRadius: '6px',
+                                            color: 'var(--text-muted)',
+                                            fontWeight: 600,
+                                            transition: 'all 0.3s ease'
+                                        }}
+                                            onMouseOver={(e) => {
+                                                e.currentTarget.style.borderColor = 'var(--primary)';
+                                                e.currentTarget.style.color = 'var(--primary-light)';
+                                            }}
+                                            onMouseOut={(e) => {
+                                                e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)';
+                                                e.currentTarget.style.color = 'var(--text-muted)';
+                                            }}
+                                        >
+                                            #{tag}
+                                        </span>
+                                    ))}
+                                </div>
+                                
+                                {exp.certificate && (
+                                    <a 
+                                        href={exp.certificate} 
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                        className="group flex items-center justify-center gap-2"
+                                        style={{
+                                            padding: '0.5rem 1.2rem',
+                                            background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%)',
+                                            border: '1px solid rgba(168, 85, 247, 0.3)',
+                                            borderRadius: '8px',
+                                            color: 'white',
+                                            fontSize: '0.85rem',
+                                            fontWeight: 600,
+                                            textDecoration: 'none',
+                                            transition: 'all 0.3s ease',
+                                            boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
+                                            backdropFilter: 'blur(5px)',
+                                            marginTop: '0.5rem'
+                                        }}
                                         onMouseOver={(e) => {
-                                            e.currentTarget.style.borderColor = 'var(--primary)';
-                                            e.currentTarget.style.color = 'var(--primary-light)';
+                                            e.currentTarget.style.background = 'linear-gradient(135deg, rgba(99, 102, 241, 0.2) 0%, rgba(168, 85, 247, 0.2) 100%)';
+                                            e.currentTarget.style.transform = 'translateY(-2px)';
+                                            e.currentTarget.style.boxShadow = '0 6px 16px rgba(168, 85, 247, 0.2)';
+                                            e.currentTarget.style.borderColor = 'rgba(168, 85, 247, 0.5)';
                                         }}
                                         onMouseOut={(e) => {
-                                            e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)';
-                                            e.currentTarget.style.color = 'var(--text-muted)';
+                                            e.currentTarget.style.background = 'linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%)';
+                                            e.currentTarget.style.transform = 'translateY(0)';
+                                            e.currentTarget.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.1)';
+                                            e.currentTarget.style.borderColor = 'rgba(168, 85, 247, 0.3)';
                                         }}
                                     >
-                                        #{tag}
-                                    </span>
-                                ))}
+                                        <i className="fas fa-certificate text-purple-400 group-hover:scale-110 transition-transform duration-300"></i>
+                                        <span>View Certificate</span>
+                                    </a>
+                                )}
                             </div>
                         </motion.div>
                     ))}

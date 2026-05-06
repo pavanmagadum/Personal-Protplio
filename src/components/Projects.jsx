@@ -18,6 +18,21 @@ const Projects = () => {
             link: 'https://person-count-dashboard.vercel.app/',
         },
         {
+            title: 'Smart Medicine Reminder System (Simulation-Based)',
+            description: 'Developed a smart healthcare reminder system to help users manage medicine schedules through interactive software simulation.',
+            duration: 'Recent',
+            image: '/Smart Medicine Reminder System.png',
+            tags: ['React', 'Healthcare', 'Automation', 'UI/UX', 'Dashboard'],
+            bullets: [
+                'Designed automated medicine reminder and dosage scheduling features.',
+                'Built a realistic smart dispenser simulation without physical IoT hardware.',
+                'Developed an interactive and user-friendly dashboard interface.',
+                'Implemented alert notifications for missed or upcoming medicines.',
+                'Used frontend technologies to visualize smart healthcare automation concepts.'
+            ],
+            link: '#',
+        },
+        {
             title: 'Climate-Aware Crop & Organic Fertilizer Recommender',
             description: 'Developed an AI-based system to recommend suitable crops and eco-friendly fertilizers using soil and climate data.',
             duration: 'Sep 2024 – Dec 2024',
@@ -52,14 +67,19 @@ const Projects = () => {
             <div className="container">
                 <header className="section-header">
                     <h2 className="section-title">
-                        Academic <span className="gradient-text">Projects</span>
+                        <span className="gradient-text">Projects</span>
                     </h2>
                     <p className="section-desc">
                         Transforming academic knowledge into real-world applications.
                     </p>
                 </header>
 
-                <div className="responsive-grid grid-wide">
+                <div 
+                    className="responsive-grid" 
+                    style={{ 
+                        '--grid-min': 'calc(50% - 2rem)'
+                    }}
+                >
                     {projects.map((project, index) => (
                         <motion.div
                             key={project.title}
@@ -70,7 +90,7 @@ const Projects = () => {
                             className="glass-card overflow-hidden h-full"
                             style={{ padding: 0, display: 'flex', flexDirection: 'column' }}
                         >
-                            <div style={{ height: 'clamp(180px, 30vw, 240px)', background: 'rgba(99,102,241,0.05)', position: 'relative', overflow: 'hidden' }}>
+                            <div style={{ height: 'clamp(250px, 40vw, 350px)', background: 'rgba(99,102,241,0.05)', position: 'relative', overflow: 'hidden' }}>
                                 {project.image ? (
                                     <img 
                                         src={project.image} 
