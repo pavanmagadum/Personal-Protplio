@@ -76,8 +76,8 @@ const Experience = () => {
                             {/* Decorative element */}
                             <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-indigo-500/10 to-transparent rounded-tr-[24px] rounded-bl-full pointer-events-none"></div>
 
-                            <div className="flex flex-col sm:flex-row justify-between items-start gap-4">
-                                <div className="flex items-center gap-4">
+                            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'flex-start', gap: '1rem' }}>
+                                <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
                                     <div style={{
                                         width: '45px',
                                         height: '45px',
@@ -125,8 +125,8 @@ const Experience = () => {
                                 ))}
                             </ul>
 
-                            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mt-auto pt-4">
-                                <div className="flex flex-wrap gap-2">
+                            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '1rem', marginTop: 'auto', paddingTop: '1rem' }}>
+                                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
                                     {exp.tags.map(tag => (
                                         <span key={tag} style={{
                                             fontSize: '0.65rem',
