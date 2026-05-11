@@ -30,7 +30,7 @@ const Projects = () => {
                 'Implemented alert notifications for missed or upcoming medicines.',
                 'Used frontend technologies to visualize smart healthcare automation concepts.'
             ],
-            link: '#',
+            link: 'https://smart-medicine-dispenser-system-fro.vercel.app',
         },
         {
             title: 'Climate-Aware Crop & Organic Fertilizer Recommender',
@@ -150,7 +150,7 @@ const Projects = () => {
                                     className="flex items-center gap-2 font-bold transition-all hover:gap-3"
                                     style={{ color: 'var(--primary-light)', fontSize: '0.9rem' }}
                                 >
-                                    View Details <i className="fas fa-arrow-right"></i>
+                                    View Project <i className="fas fa-arrow-right"></i>
                                 </a>
                             </div>
                         </motion.div>
