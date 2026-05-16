@@ -7,7 +7,7 @@ const Education = () => {
             degree: 'Master of Computer Applications (MCA)',
             institution: 'Sir M. Visvesvaraya Institute of Technology, Bengaluru',
             duration: 'Ongoing',
-            score: '9.2 CGPA (Current)',
+            score: '9.2 SGPA (Current)',
             icon: 'fa-user-graduate',
             color: 'var(--primary)',
             description: 'Specializing in Computer Applications with a focus on AI, Machine Learning, and Software Development.',
