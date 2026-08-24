@@ -23,57 +23,58 @@ const Navbar = () => {
     ];
 
     return (
-        <nav className={`fixed w-full z-1000 transition-all duration-300 ${scrolled ? 'nav-scrolled shadow-lg' : 'bg-transparent py-5'}`}>
-            <div className="container flex justify-between items-center" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <a href="#home" className="flex items-center gap-3 gradient-text transform hover:scale-105 transition-transform" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', fontSize: '1.25rem', fontWeight: 900 }}>
-                    <div style={{
-                        width: '32px',
-                        height: '32px',
-                        borderRadius: '50%',
-                        overflow: 'hidden',
-                        border: '2px solid var(--primary-light)',
-                        boxShadow: '0 0 10px rgba(99, 102, 241, 0.4)',
-                        flexShrink: 0
-                    }}>
-                        <img src="/image.JPG" alt="Logo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+        <div className="nav-wrapper">
+            <nav className={`nav-glass ${scrolled ? 'scrolled' : ''}`}>
+                <div className="container" style={{ display: 'grid', gridTemplateColumns: '1fr auto 1fr', alignItems: 'center', width: '100%' }}>
+                    {/* Left: Logo & Name */}
+                    <a href="#home" className="flex items-center gap-3 transform hover:scale-105 transition-transform" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', fontSize: '1.25rem', fontWeight: 900, color: 'white', justifySelf: 'start' }}>
+                        <div style={{
+                            width: '32px',
+                            height: '32px',
+                            borderRadius: '50%',
+                            overflow: 'hidden',
+                            border: '1px solid rgba(255,255,255,0.1)',
+                            flexShrink: 0
+                        }}>
+                            <img src="/image.JPG" alt="Logo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                        </div>
+                        <span className="mobile-hidden">PAVAN M M</span>
+                        <span className="md-hidden">Pavan</span>
+                    </a>
+
+                    {/* Center: Pill Navigation (Desktop Only) */}
+                    <div className="nav-pill-container" style={{ justifySelf: 'center' }}>
+                        {navLinks.map((link, index) => (
+                            <a 
+                                key={link.name} 
+                                href={link.href} 
+                                className={`pill-link ${index === 0 ? 'active' : ''}`}
+                            >
+                                {link.name}
+                            </a>
+                        ))}
                     </div>
-                    <span className="mobile-hidden">PAVAN M M</span>
-                    <span className="md-hidden">Pavan M M</span>
-                </a>
 
-                {/* Desktop Menu */}
-                <ul className="hidden md-flex items-center" style={{ gap: '1rem', alignItems: 'center' }}>
-                    {navLinks.map((link) => (
-                        <li key={link.name}>
-                            <a href={link.href} className="nav-link" style={{ fontSize: '0.8rem' }}>{link.name}</a>
-                        </li>
-                    ))}
-                    <li>
-                        <a href="/Pavan resume.pdf" target="_blank" rel="noopener noreferrer" className="btn-resume">
-                            RESUME
-                        </a>
-                    </li>
-                    <li><a href="#contact" className="btn-hire">HIRE ME</a></li>
-                </ul>
-            </div>
+                    {/* Right Side (Utilities & Mobile Toggle) */}
+                    <div style={{ display: 'flex', gridColumn: '3', justifySelf: 'end', alignItems: 'center', gap: '1rem' }}>
+                        {/* Utilities (Desktop Only) */}
+                        <div className="hidden md-flex items-center">
+                            <a href="/Pavan resume.pdf" target="_blank" rel="noopener noreferrer" className="btn-resume" style={{ padding: '0.5rem 1.25rem', fontSize: '0.85rem', borderRadius: '100px', background: 'rgba(255,255,255,0.05)' }}>
+                                <i className="fas fa-file-alt"></i> Resume
+                            </a>
+                        </div>
 
-            {/* Mobile Toggle Button - Outside container for better positioning */}
-            <button
-                className={`mobile-toggle ${mobileMenuOpen ? 'active' : ''}`}
-                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                aria-label="Toggle Menu"
-                style={{ 
-                    display: 'flex',
-                    position: 'fixed',
-                    right: 'max(1.25rem, 5vw)',
-                    top: scrolled ? '15px' : '25px',
-                    backgroundColor: mobileMenuOpen ? 'transparent' : 'rgba(255,255,255,0.05)',
-                    borderRadius: '50%',
-                    backdropFilter: 'blur(5px)'
-                }}
-            >
-                <i className={`fas ${mobileMenuOpen ? 'fa-times' : 'fa-bars'}`}></i>
-            </button>
+                        {/* Mobile Toggle Button */}
+                        <button
+                            className={`mobile-toggle ${mobileMenuOpen ? 'active' : ''}`}
+                            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                            aria-label="Toggle Menu"
+                        >
+                            <i className={`fas ${mobileMenuOpen ? 'fa-times' : 'fa-bars'}`}></i>
+                        </button>
+                    </div>
+                </div>
+            </nav>
 
             {/* Mobile Overlay Backdrop */}
             <div 
@@ -116,7 +117,7 @@ const Navbar = () => {
                     </a>
                 </div>
             </div>
-        </nav>
+        </div>
     );
 };
 

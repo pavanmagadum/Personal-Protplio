@@ -4,6 +4,20 @@ import { motion } from 'framer-motion';
 const Projects = () => {
     const projects = [
         {
+            title: 'SyntaxFlow – Interactive Drag & Drop Coding Study Platform',
+            description: 'A premium, visual coding learning platform designed for beginners. It transforms the often-intimidating experience of learning to code into an intuitive, gamified process by utilizing an interactive drag-and-drop interface with adaptive feedback.',
+            duration: 'Recent',
+            image: '/syntax-flow.png',
+            tags: ['React 19', 'TypeScript', 'Tailwind v4', 'Framer Motion', 'Zustand', 'Firebase'],
+            bullets: [
+                'Developed an interactive drag-and-drop code arrangement system using @dnd-kit for intuitive lesson flows.',
+                'Designed a premium UI/UX featuring a modern, calm visual system with soft shadows and smooth micro-animations.',
+                'Implemented role-based access control with separate routes for student dashboards and an admin console.',
+                'Built a highly modular and scalable component architecture using React 19 and Vite.'
+            ],
+            link: 'https://syntax-flow-xi.vercel.app/',
+        },
+        {
             title: 'Vision Guard – AI-Powered Security Analytics',
             description: 'Developed an intelligent surveillance system featuring real-time person tracking, face detection, and automated security alerts.',
             duration: 'Feb 2025 – Present',
@@ -21,7 +35,7 @@ const Projects = () => {
             title: 'Smart Medicine Reminder System (Simulation-Based)',
             description: 'Developed a smart healthcare reminder system to help users manage medicine schedules through interactive software simulation.',
             duration: 'Recent',
-            image: '/Smart Medicine Reminder System.png',
+            image: '/smart-medicine.png',
             tags: ['React', 'Healthcare', 'Automation', 'UI/UX', 'Dashboard'],
             bullets: [
                 'Designed automated medicine reminder and dosage scheduling features.',
@@ -36,7 +50,7 @@ const Projects = () => {
             title: 'Climate-Aware Crop & Organic Fertilizer Recommender',
             description: 'Developed an AI-based system to recommend suitable crops and eco-friendly fertilizers using soil and climate data.',
             duration: 'Sep 2024 – Dec 2024',
-            image: '/project.png',
+            image: '/crop-recommender.png',
             tags: ['Python', 'Pandas', 'NumPy', 'Scikit-learn', 'Streamlit'],
             bullets: [
                 'Analyzed N, P, K, pH values and weather datasets using Pandas and NumPy.',
@@ -90,7 +104,7 @@ const Projects = () => {
                             className="glass-card overflow-hidden h-full"
                             style={{ padding: 0, display: 'flex', flexDirection: 'column' }}
                         >
-                            <div style={{ height: 'clamp(250px, 40vw, 350px)', background: 'rgba(99,102,241,0.05)', position: 'relative', overflow: 'hidden' }}>
+                            <div className="project-image-container" style={{ aspectRatio: '16/10', background: 'rgba(255,255,255,0.02)', position: 'relative', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
                                 {project.image ? (
                                     <img 
                                         src={project.image} 
@@ -99,7 +113,8 @@ const Projects = () => {
                                             width: '100%', 
                                             height: '100%', 
                                             objectFit: 'cover',
-                                            borderRadius: '24px 24px 0 0'
+                                            objectPosition: 'top center',
+                                            borderRadius: '16px 16px 0 0'
                                         }} 
                                     />
                                 ) : (

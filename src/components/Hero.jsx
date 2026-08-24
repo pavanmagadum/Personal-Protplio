@@ -14,48 +14,38 @@ const Hero = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                 >
-                    <span className="hero-badge" style={{ marginBottom: '2rem' }}>
-                        Aspiring Software Engineer
+                    <span className="hero-badge" style={{ marginBottom: '1.5rem', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)', color: 'white' }}>
+                        Software Engineer & AI Enthusiast
                     </span>
-                    <h1 className="hero-title" style={{ marginBottom: '2.5rem' }}>
-                        Transforming Ideas INTO <br />
-                        <span className="gradient-text">
-                            Intelligent Systems
-                        </span>
+                    <h1 className="hero-title" style={{ marginBottom: '1.5rem' }}>
+                        Building <span className="text-gradient-animated">Intelligent</span><br />
+                        <span style={{ color: 'white' }}>Scalable Systems</span>
                     </h1>
                     <p className="hero-desc">
-                        Hey, I'm <span className="text-white">PAVAN M M</span>. Currently pursuing MCA and specializing in building
-                        scalable, AI-powered applications with real-world impact. Passionate about Python, Java, and Machine Learning.
+                        Hi, I'm <span style={{ color: 'white', fontWeight: 'bold' }}>PAVAN M M</span>. I build elegant, high-performance web applications and AI solutions with a focus on modern design and user experience.
                     </p>
                     <div className="hero-btns" style={{
                         display: 'flex',
                         flexWrap: 'wrap',
-                        gap: '1.25rem',
+                        gap: '1.5rem',
                         justifyContent: 'center',
                         alignItems: 'center',
-                        marginTop: '2rem'
+                        marginTop: '2.5rem'
                     }}>
-                        <a
-                            href="#projects"
-                            className="btn-primary"
-                        >
-                            Recent Projects
+                        <a href="#projects" className="btn-primary" style={{ padding: '0.8rem 2rem', borderRadius: '8px' }}>
+                            View Projects
                         </a>
-                        <a
-                            href="/Pavan resume.pdf"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="btn-resume"
-                        >
-                            <i className="fas fa-download"></i>
-                            Download CV
+                        <a href="/Pavan resume.pdf" target="_blank" rel="noopener noreferrer" className="btn-outline" style={{ padding: '0.8rem 2rem', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.1)' }}>
+                            Resume
                         </a>
-                        <a
-                            href="#contact"
-                            className="btn-outline"
-                        >
-                            Get In Touch
-                        </a>
+                        <div style={{ display: 'flex', gap: '1rem', marginLeft: '0.5rem' }}>
+                            <a href="https://github.com/pavanmagadum" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-muted)', fontSize: '1.5rem', transition: 'color 0.3s' }} onMouseOver={(e) => e.target.style.color = 'white'} onMouseOut={(e) => e.target.style.color = 'var(--text-muted)'} aria-label="GitHub">
+                                <i className="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/pavan-magadum-8477682b6/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-muted)', fontSize: '1.5rem', transition: 'color 0.3s' }} onMouseOver={(e) => e.target.style.color = 'white'} onMouseOut={(e) => e.target.style.color = 'var(--text-muted)'} aria-label="LinkedIn">
+                                <i className="fab fa-linkedin"></i>
+                            </a>
+                        </div>
                     </div>
                 </motion.div>
             </div>
